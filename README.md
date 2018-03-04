@@ -26,7 +26,8 @@ export default {
       return this.$refs.imgSelf.height / this.$refs.imgSelf.width
     }
   },
-  methods: {
+  // 主要计算图片的长宽比和容器的长宽比对比出是图片胖还是容器胖然后对图片进行缩放
+  methods: {
     imgLoaded () {
       this.$nextTick(() => {
         let thisContainer = this.$refs.containerSelf
@@ -36,13 +37,15 @@ export default {
         let containerHeightHalf = containerHeight / 2
         let containerHeightWidth = containerHeight / containerWidth
         let thisImg = this.$refs.imgSelf
-        if (containerHeightWidth >= this.imgHeightWidth) {
+        // 如果图片比较胖,则高就等于容器,隐藏身体左右两边
+        if (containerHeightWidth >= this.imgHeightWidth) {
           thisImg.height = containerHeight
           let imgWidthHalf = thisImg.width / 2
           let leftMove = imgWidthHalf - containerWidthHalf
           thisImg.style.left = -leftMove + 'px'
         } else {
-          thisImg.width = containerWidth
+        // 如果图片比较瘦,则宽就等于容器,隐藏身体上下两边
+          thisImg.width = containerWidth
           let imgHeightHalf = thisImg.height / 2
           let upMove = imgHeightHalf - containerHeightHalf
           thisImg.style.top = -upMove + 'px'
