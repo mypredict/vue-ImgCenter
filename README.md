@@ -5,12 +5,14 @@ vue组件,加载的图片全部都居中-等比例缩放不失真
 ```
 <template lang="pug">
   div.img-center(ref="containerSelf")
+    // 三个属性分别接受父组件传过来的图片路径,图片加载完毕,获取本组件实例对象
     img.center-image(:src="thisImgSrc", @load="imgLoaded", ref="imgSelf")
 </template>
 
 <script type="text/javascript">
 export default {
   name: 'ImgCenter',
+  // 从父组件接受图片路径参数,限定为String
   props: {
     imgSrc: String
   },
