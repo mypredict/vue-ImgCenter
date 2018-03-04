@@ -80,3 +80,4 @@ components: {
 <template lang="pug"> //此处使用了pug模板
   div#app
     ImgCenter(:img-src="#") //此处为你所要加载的图片路径就完成了
+```
