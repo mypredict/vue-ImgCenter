@@ -86,4 +86,4 @@ components: {
   div#app
     ImgCenter(:img-src="#") //此处为你所要加载的图片路径就完成了
 ```
-[这是另一个图片居中的vue组件,这个组件能动态响应窗口的大小变化](nihao)
+[这是另一个图片居中的vue组件,这个组件能动态响应窗口的大小变化](https://github.com/mypredict/vue-ImgCenterMove)
