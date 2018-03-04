@@ -1,6 +1,6 @@
 <template lang="pug">
   div.img-center(ref="containerSelf")
-    img.center-image(:src="thisImgSrc", @load="imgLoaded" ref="imgSelf")
+    img.center-image(:src="thisImgSrc", @load="imgLoaded", ref="imgSelf")
 </template>
 
 <script type="text/javascript">
