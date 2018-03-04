@@ -5,13 +5,13 @@ vue组件,加载的图片全部都居中-等比例缩放不失真
 ```
 <template lang="pug">
   div.img-center(ref="containerSelf")
-    img.center-image(:src="thisImgSrc", @load="imgLoaded" ref="imgSelf")
+    img.center-image(:src="thisImgSrc", @load="imgLoaded", ref="imgSelf")
 </template>
 
 <script type="text/javascript">
 export default {
   name: 'ImgCenter',
-  props: {
+  props: {
     imgSrc: String
   },
   data () {
@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>  //此处使用了scss模板, scoped用来限制css作用域
 .img-center {
   position: relative;
   width: 100%;
