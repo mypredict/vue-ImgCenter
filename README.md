@@ -1,4 +1,4 @@
-# VueImgCenter
+# Vue-ImgCenter
 vue组件,加载的图片全部都居中-等比例缩放不失真
 这是一个基于vue的小组件,主要用于第一次加载时能够将各类大小比例的图片能够不失真的显示在自己所定义的盒子内,实现十分简单
 ## 首先来看一下源码
@@ -65,3 +65,18 @@ export default {
 </style>
 ```
 ## 使用说明
+
+首先先在你需要的页面里导入本vue文件
+```
+<script>
+import ImgCenter from '@/ImgCenter' //你的存放路径
+
+//注册这个组件
+components: {
+  ImgCenter
+}
+
+//接下来就是直接在html中引用了
+<template lang="pug"> //此处使用了pug模板
+  div#app
+    ImgCenter(:img-src="#") //此处为你所要加载的图片路径就完成了
